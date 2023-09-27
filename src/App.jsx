@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import './index.css'
 import { nanoid } from 'nanoid'
 
 import Tasks from "./components/Tasks";
@@ -12,7 +11,7 @@ function App() {
 
   return (
     <>
-    <header className="text-center text-lg ">Header</header>
+    <header className="text-center text-lg underline">Header</header>
     <main>
       <Tasks>
         <AddTaskButton />
