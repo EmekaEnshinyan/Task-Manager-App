@@ -4,6 +4,9 @@ import tailwindcss from "tailwindcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  servier: {
+    host: true,
+  },
   plugins: [react(), tailwindcss()],
   css: {
     postcss: {
