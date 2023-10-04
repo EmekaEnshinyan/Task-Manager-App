@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Task() {
+const Task = ({ task }) => {
+
   return (
-    <div>Task</div>
+    <div>{task}</div>
   )
 }
-
+  
 export default Task

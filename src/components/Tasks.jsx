@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Tasks() {
+const Tasks = () => {
   return (
-    <div>Tasks</div>
+    <div>
+      
+    </div>
   )
 }
 
