@@ -11,19 +11,16 @@ function App() {
   //when button is pressed, passes el to the obj which will be displayed in <input id="addTask>"
   const handleSubmitTask = (e) => { 
     e.preventDefault()
-    const data = new FormData(e.target);
-    console.log("data: ", data)
-    const taskText = data.get('addTask'); //
-  
-    console.log("added: ", taskText)
-    console.log("tasks", tasks)
-    if (taskText.length > 0) {     // checks if there is an obj present
+
+    let inputText = document.getElementById('addTask')
+    if (inputText.value.length > 0) {     // checks if there is an obj present
       /**
        * Thie useState function is important! Since the
        * value of the tasks are immutable, the program has to make a copy of what was passed as the 
        * new reference resulting in the additional task being created for react
        */
-      setTasks([...tasks, taskText]) // Spread operator (...) expands an iterable so that the function call can allow more args/el
+      setTasks([...tasks, inputText.value]) // Spread operator (...) expands an iterable so that the function call can allow more args/el
+      inputText.value = '';
     }
     console.log("tasks after", tasks)// ok
   }
@@ -33,7 +30,7 @@ function App() {
     <header className="text-center text-lg underline">Header</header>
 
     <main>
-      <h2>Your Tasks</h2>
+      <h2>Your List of Tasks</h2>
 
       <form id="addTaskForm" onSubmit={handleSubmitTask}> {/**where button is being populated*/}
 
