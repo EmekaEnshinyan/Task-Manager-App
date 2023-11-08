@@ -1,5 +1,5 @@
 
-![Progress](https://progress-bar.dev/95/?title=Working)
+![Progress](https://progress-bar.dev/100/?title=Working)
 
 # Task-Manager-App
 =======
